@@ -1,0 +1,22 @@
+Pertanyaan Refleksi
+Setelah menyelesaikan kode, jawab pertanyaan berikut:
+
+1. Apa perbedaan antara interface dengan class biasa?
+2. Mengapa interface tidak memiliki implementasi method di dalamnya?
+3. Apa tujuan penggunaan keyword "implements" pada sebuah class?
+4. Apakah sebuah class dapat mengimplementasikan lebih dari satu interface? Jelaskan dan berikan contoh sederhana.
+5. Jika sebuah class mengimplementasikan interface, apa yang terjadi jika class tersebut tidak mengimplementasikan semua method dari interface tersebut?
+
+jawaban
+1. interface bisa berisi deklarasi method tanpa implementasi (abstract), class biasa tidak bisa. interface tidak bisa dibuat langung objeknya, class biasa bisa.
+2. karna interface hany sebagai blueprint yang harus dipatuhi semua class yang mengimplementasikannya. jadi, semua method didalamnya abstract (default)
+3. tujuannya untuk sebuah class bisa mengimplementtasikan semua method dalam interface
+4. ya, bisa. contoh:
+interface A { void methodA(); }
+interface B { void methodB(); }
+
+class C implements A, B {
+    public void methodA(){System.out.println("A");}
+    public void methodB(){System.out.println("B");}
+}
+5. akan terjadi eror, kecuali class tersebut merupakan abstract class
